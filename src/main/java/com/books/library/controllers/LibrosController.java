@@ -42,9 +42,9 @@ public class LibrosController {
         return ResponseEntity.ok(libroActualizado);
     }
 
-    @DeleteMapping("/borrar")
+    @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?>delete(@PathVariable Long id){
        librosServices.delete(id);
-        return  ResponseEntity.ok("Libro borrado correctamente");
+        return  ResponseEntity.ok("Libro con id " +id + " borrado correctamente");
     }
 }

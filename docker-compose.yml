@@ -1,0 +1,15 @@
+
+services:
+  mysql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nuevocontenedor
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: db
+    ports:
+      - 3309:3306
+
+
